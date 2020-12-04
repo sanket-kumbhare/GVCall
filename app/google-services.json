@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "818487234684",
+    "firebase_url": "https://gv-call-3eb44.firebaseio.com",
+    "project_id": "gv-call-3eb44",
+    "storage_bucket": "gv-call-3eb44.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:818487234684:android:2ec1d4f2472fe5cac1f9f9",
+        "android_client_info": {
+          "package_name": "com.project.gvcall"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "818487234684-7i47ai26l1sih3vi5k5h1htf8raj85p6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD_P4x68_tHf3acKMx8qWTHFIgnx4q1_Ek"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "818487234684-7i47ai26l1sih3vi5k5h1htf8raj85p6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
