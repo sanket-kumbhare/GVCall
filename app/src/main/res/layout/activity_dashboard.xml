@@ -11,7 +11,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="100dp"
         app:cardElevation="0dp"
-        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigation"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -19,7 +19,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_margin="30dp"
+            android:layout_margin="35dp"
             android:orientation="vertical">
 
             <ImageView
@@ -38,7 +38,8 @@
                 android:layout_height="match_parent"
                 android:layout_margin="10dp"
                 android:layout_marginBottom="10dp"
-                android:text="@string/please_share_channel_code_with_you_friend_to_join_video_call" />
+                android:text="@string/please_share_channel_code_with_you_friend_to_join_video_call"
+                android:textAlignment="center" />
 
             <EditText
                 android:id="@+id/codeBox"
@@ -78,7 +79,7 @@
                     android:background="@drawable/button_style_2"
                     android:text="@string/share"
                     android:textColor="@color/white"
-                    app:icon="@drawable/share"/>
+                    app:icon="@drawable/share" />
 
             </LinearLayout>
 
@@ -87,7 +88,7 @@
     </androidx.cardview.widget.CardView>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottomNavigationView"
+        android:id="@+id/bottomNavigation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#e0e0e0"
