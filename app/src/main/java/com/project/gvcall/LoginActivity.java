@@ -71,8 +71,8 @@ public class LoginActivity extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         progressDialog.dismiss();
                         if(task.isSuccessful()) {
-                            startActivity(new Intent(LoginActivity.this,
-                                    DashboardActivity.class));
+                            startActivity(new Intent(LoginActivity.this, DashboardActivity.class));
+                            finish();
                         }
                         else {
                             Toast.makeText(LoginActivity.this,
@@ -88,7 +88,8 @@ public class LoginActivity extends AppCompatActivity {
         createBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(), SignupActivity.class));
+                startActivity(new Intent(LoginActivity.this, SignupActivity.class));
+                finish();
             }
         });
 

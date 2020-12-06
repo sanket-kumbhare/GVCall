@@ -74,9 +74,9 @@ public class DashboardActivity extends AppCompatActivity {
                         break;
                     case R.id.logout:
                         auth.signOut();
-                        finish();
                         startActivity(new Intent(DashboardActivity.this,
                                 LoginActivity.class));
+                        finish();
                         break;
                 }
                 return true;
