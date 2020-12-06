@@ -51,8 +51,8 @@ public class SignupActivity extends AppCompatActivity {
                 progressDialog.show();
                 String name, email, password;
                 name = nameBox.getText().toString();
-                email = emailBox.getText().toString();
-                password = passwordBox.getText().toString();
+                email = emailBox.getText().toString().trim();
+                password = passwordBox.getText().toString().trim();
 
                 User user = new User();
                 user.setName(name);
@@ -70,12 +70,14 @@ public class SignupActivity extends AppCompatActivity {
                                             new OnCompleteListener<Void>() {
                                 @Override
                                 public void onComplete(@NonNull Task<Void> task) {
-                                    startActivity(new Intent(SignupActivity.this, LoginActivity.class));
+                                    startActivity(new Intent(SignupActivity.this,
+                                            LoginActivity.class));
                                 }
                             });
                         }
                         else {
-                            Toast.makeText(SignupActivity.this, task.getException().getLocalizedMessage(), Toast.LENGTH_SHORT).show();
+                            Toast.makeText(SignupActivity.this, task.getException()
+                                    .getLocalizedMessage(), Toast.LENGTH_SHORT).show();
                         }
                     }
                 });

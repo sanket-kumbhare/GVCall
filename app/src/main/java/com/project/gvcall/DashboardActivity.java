@@ -3,6 +3,7 @@ package com.project.gvcall;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
@@ -11,16 +12,18 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.firebase.auth.FirebaseAuth;
 
 import org.jitsi.meet.sdk.JitsiMeet;
 import org.jitsi.meet.sdk.JitsiMeetActivity;
 import org.jitsi.meet.sdk.JitsiMeetConferenceOptions;
-import org.jitsi.meet.sdk.JitsiMeetOngoingConferenceService;
 
 import java.net.MalformedURLException;
 import java.net.URL;
 
 public class DashboardActivity extends AppCompatActivity {
+
+    FirebaseAuth auth;
 
     EditText codeBox;
     Button joinBtn, shareBtn;
@@ -31,9 +34,10 @@ public class DashboardActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dashboard);
 
+        auth = FirebaseAuth.getInstance();
+
         codeBox = findViewById(R.id.codeBox);
-        joinBtn = findViewById(R.id.joinBtn);
-        shareBtn = findViewById(R.id.shareBtn);
+        joinBtn = findViewById(R.id.createBtn);
         bottomNavigation = findViewById(R.id.bottomNavigation);
 
         URL serverURL;
@@ -65,13 +69,14 @@ public class DashboardActivity extends AppCompatActivity {
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getItemId()) {
                     case R.id.home:
-                        Toast.makeText(DashboardActivity.this, "homeselected", Toast.LENGTH_SHORT).show();
-                        break;
-                    case R.id.history:
-                        Toast.makeText(DashboardActivity.this, "historyselected", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(DashboardActivity.this, "Home",
+                                Toast.LENGTH_SHORT).show();
                         break;
                     case R.id.logout:
-                        Toast.makeText(DashboardActivity.this, "logoutselected", Toast.LENGTH_SHORT).show();
+                        auth.signOut();
+                        finish();
+                        startActivity(new Intent(DashboardActivity.this,
+                                LoginActivity.class));
                         break;
                 }
                 return true;

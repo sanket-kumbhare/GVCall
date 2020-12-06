@@ -13,10 +13,10 @@
     <string name="setting">Setting</string>
     <string name="textview">TextView</string>
     <string name="code">Code</string>
-    <string name="please_share_channel_code_with_you_friend_to_join_video_call">Please Share Channel Name with you Friend to join Video Call</string>
+    <string name="please">Please Share Channel Name with you Friend to join Video Call</string>
     <string name="button">Button</string>
     <string name="join">Join</string>
-    <string name="share">Share</string>
+    <string name="create">Create / Join</string>
     <string name="channel_code">Enter Channel Name</string>
     <string name="todo">TODO</string>
 </resources>

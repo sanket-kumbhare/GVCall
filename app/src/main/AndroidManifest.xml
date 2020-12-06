@@ -9,15 +9,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.GVCall">
-        <activity android:name=".DashboardActivity" />
+        <activity android:name=".DashboardActivity"
+            android:windowSoftInputMode="adjustResize"/>
         <activity
             android:name=".SignupActivity"
             android:label="Create Account"
-            android:windowSoftInputMode="adjustPan" />
+            android:windowSoftInputMode="adjustResize" />
         <activity
             android:name=".LoginActivity"
             android:label="Login"
-            android:windowSoftInputMode="adjustPan" />
+            android:windowSoftInputMode="adjustResize" />
         <activity android:name=".SplashScreen"
             android:theme="@style/SplashScreen">
             <intent-filter>

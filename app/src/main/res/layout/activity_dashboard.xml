@@ -9,7 +9,6 @@
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="100dp"
         app:cardElevation="0dp"
         app:layout_constraintBottom_toTopOf="@+id/bottomNavigation"
         app:layout_constraintEnd_toEndOf="parent"
@@ -38,7 +37,7 @@
                 android:layout_height="match_parent"
                 android:layout_margin="10dp"
                 android:layout_marginBottom="10dp"
-                android:text="@string/please_share_channel_code_with_you_friend_to_join_video_call"
+                android:text="@string/please"
                 android:textAlignment="center" />
 
             <EditText
@@ -54,34 +53,17 @@
                 android:inputType="textPersonName"
                 android:padding="10dp" />
 
-            <LinearLayout
+            <Button
+                android:id="@+id/createBtn"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
-
-                <android.widget.Button
-                    android:id="@+id/joinBtn"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="10dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/button_style_1"
-                    android:text="@string/join"
-                    android:textColor="@color/white"
-                    app:icon="@drawable/link" />
-
-                <android.widget.Button
-                    android:id="@+id/shareBtn"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="10dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/button_style_2"
-                    android:text="@string/share"
-                    android:textColor="@color/white"
-                    app:icon="@drawable/share" />
-
-            </LinearLayout>
+                android:layout_height="0dp"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/button_style_1"
+                android:text="@string/create"
+                android:textColor="@color/white"
+                app:icon="@drawable/video"
+                app:iconGravity="textStart" />
 
         </LinearLayout>
 

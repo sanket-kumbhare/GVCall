@@ -6,10 +6,6 @@
         android:icon="@drawable/home"
         android:title="@string/home" />
     <item
-        android:id="@+id/history"
-        android:icon="@drawable/clock"
-        android:title="@string/history" />
-    <item
         android:id="@+id/logout"
         android:icon="@drawable/logout"
         android:title="@string/logout" />
