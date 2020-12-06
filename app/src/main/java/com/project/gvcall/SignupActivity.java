@@ -48,7 +48,7 @@ public class SignupActivity extends AppCompatActivity {
         createBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                progressDialog.show();
+
                 String name, email, password;
                 name = nameBox.getText().toString();
                 email = emailBox.getText().toString().trim();
@@ -59,6 +59,21 @@ public class SignupActivity extends AppCompatActivity {
                 user.setEmail(email);
                 user.setPassword(password);
 
+                if (name.isEmpty()) {
+                    nameBox.setError(("Name is Required"));
+                    nameBox.requestFocus();
+                    return;
+                }else if (email.isEmpty()) {
+                    emailBox.setError(("Email is Required"));
+                    emailBox.requestFocus();
+                    return;
+                }else if (password.isEmpty()) {
+                    passwordBox.setError("Password is Required");
+                    passwordBox.requestFocus();
+                    return;
+                }
+
+                progressDialog.show();
                 auth.createUserWithEmailAndPassword(email, password)
                         .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
@@ -76,8 +91,9 @@ public class SignupActivity extends AppCompatActivity {
                             });
                         }
                         else {
-                            Toast.makeText(SignupActivity.this, task.getException()
-                                    .getLocalizedMessage(), Toast.LENGTH_SHORT).show();
+                            Toast.makeText(SignupActivity.this,
+                                    task.getException().getLocalizedMessage(),
+                                    Toast.LENGTH_SHORT).show();
                         }
                     }
                 });
@@ -87,7 +103,7 @@ public class SignupActivity extends AppCompatActivity {
         loginBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(SignupActivity.this, LoginActivity.class));
+                startActivity(new Intent(getApplicationContext(), LoginActivity.class));
             }
         });
 

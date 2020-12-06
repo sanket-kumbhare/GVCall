@@ -49,11 +49,22 @@ public class LoginActivity extends AppCompatActivity {
         loginBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                progressDialog.show();
+
                 String email, password;
                 email = emailBox.getText().toString();
                 password = passwordBox.getText().toString();
 
+                if (email.isEmpty()) {
+                    emailBox.setError("Email is Required");
+                    emailBox.requestFocus();
+                    return;
+                }else if (password.isEmpty()) {
+                    passwordBox.setError("Password is Required");
+                    passwordBox.requestFocus();
+                    return;
+                }
+
+                progressDialog.show();
                 auth.signInWithEmailAndPassword(email, password)
                         .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
@@ -64,8 +75,9 @@ public class LoginActivity extends AppCompatActivity {
                                     DashboardActivity.class));
                         }
                         else {
-                            Toast.makeText(LoginActivity.this, task.getException()
-                                    .getLocalizedMessage(), Toast.LENGTH_SHORT).show();
+                            Toast.makeText(LoginActivity.this,
+                                    task.getException().getLocalizedMessage(),
+                                    Toast.LENGTH_SHORT).show();
                         }
                     }
                 });
@@ -76,32 +88,10 @@ public class LoginActivity extends AppCompatActivity {
         createBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(LoginActivity.this, SignupActivity.class));
+                startActivity(new Intent(getApplicationContext(), SignupActivity.class));
             }
         });
 
-        emailBox.addTextChangedListener(loginTextWatcher);
-        passwordBox.addTextChangedListener(loginTextWatcher);
-
     }
 
-    private TextWatcher loginTextWatcher = new TextWatcher() {
-        @Override
-        public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
-        }
-
-        @Override
-        public void onTextChanged(CharSequence s, int start, int before, int count) {
-            String email = emailBox.getText().toString();
-            String password = passwordBox.getText().toString();
-            loginBtn.setEnabled(!email.isEmpty() && !password.isEmpty());
-        }
-
-        @Override
-        public void afterTextChanged(Editable s) {
-
-        }
-
-    };
 }
