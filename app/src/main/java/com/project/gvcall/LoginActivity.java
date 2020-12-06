@@ -51,8 +51,8 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 String email, password;
-                email = emailBox.getText().toString();
-                password = passwordBox.getText().toString();
+                email = emailBox.getText().toString().trim();
+                password = passwordBox.getText().toString().trim();
 
                 if (email.isEmpty()) {
                     emailBox.setError("Email is Required");
