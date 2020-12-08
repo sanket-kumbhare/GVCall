@@ -56,10 +56,15 @@ public class DashboardActivity extends AppCompatActivity {
         joinBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                JitsiMeetConferenceOptions options = new JitsiMeetConferenceOptions.Builder().
-                        setRoom(codeBox.getText().toString()).setWelcomePageEnabled(false).build();
 
-                JitsiMeetActivity.launch(DashboardActivity.this,options);
+                if (codeBox.getText().toString().isEmpty()) {
+                    Toast.makeText(DashboardActivity.this, "Please Enter Channel Name", Toast.LENGTH_SHORT).show();
+                } else {
+                    JitsiMeetConferenceOptions options = new JitsiMeetConferenceOptions.Builder().
+                            setRoom(codeBox.getText().toString()).setWelcomePageEnabled(false).build();
+
+                    JitsiMeetActivity.launch(DashboardActivity.this, options);
+                }
             }
         });
 
