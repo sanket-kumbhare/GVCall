@@ -27,9 +27,9 @@ Login Activity                 |  Registration Activity          |  Dashboard Ac
 ![](https://github.com/Sanket-Kumbhare/GVCall/blob/master/screenshots/login.png)  |  ![](https://github.com/Sanket-Kumbhare/GVCall/blob/master/screenshots/signup.png)  |  ![](https://github.com/Sanket-Kumbhare/GVCall/blob/master/screenshots/dashboard.png)  
 
 
-Dashboard Activity                  |  Video Call Activity             |  Features Menu       
+Video Call Activity             |  Features Menu          |  
 :-------------------------:|:-------------------------:|:-------------------------:
-![](https://github.com/Sanket-Kumbhare/GVCall/blob/master/screenshots/dashboard.png)  |  ![](https://github.com/Sanket-Kumbhare/GVCall/blob/master/screenshots/call.png)  |  ![](https://github.com/Sanket-Kumbhare/GVCall/blob/master/screenshots/features.png) 
+![](https://github.com/Sanket-Kumbhare/GVCall/blob/master/screenshots/call.png)  |  ![](https://github.com/Sanket-Kumbhare/GVCall/blob/master/screenshots/features.png)  | 
 
 
 
