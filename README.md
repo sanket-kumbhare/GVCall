@@ -22,9 +22,9 @@ Firebase Database is used for user authentication and for video conferencing Jit
 #### Firebase: https://firebase.google.com/
 
 ## ScreenShots
-Login Activity                 |  Registration Activity          |  Dashboard Activity                  |
-:-------------------------:|:-------------------------:
-![](https://github.com/Sanket-Kumbhare/GVCall/blob/master/screenshots/login.png)  |  ![](https://github.com/Sanket-Kumbhare/GVCall/blob/master/screenshots/signup.png)  |  ![](https://github.com/Sanket-Kumbhare/GVCall/blob/master/screenshots/dashboard.png)  |
+Login Activity                 |  Registration Activity          |  Dashboard Activity                  
+:-------------------------:|:-------------------------:|:-------------------------:
+![](https://github.com/Sanket-Kumbhare/GVCall/blob/master/screenshots/login.png)  |  ![](https://github.com/Sanket-Kumbhare/GVCall/blob/master/screenshots/signup.png)  |  ![](https://github.com/Sanket-Kumbhare/GVCall/blob/master/screenshots/dashboard.png)  
 
 
 Dashboard Activity                  |  Video Call Activity
