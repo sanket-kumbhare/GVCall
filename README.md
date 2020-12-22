@@ -1,4 +1,4 @@
-# GVCall Ap
+# GVCall App (Video Conferencing Android Application)
 
 ## Description
 GVCall Application is an video conferencing calling app. Where users can Create/Join Channel or Room. For Creating user(hostuser) just need to set Room/Channel Name and needs to share the Room/Channel Name with other user and for joining Room/Channel user need to enter same Room/Channel name which set by the hostuser.
