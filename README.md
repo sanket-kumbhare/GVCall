@@ -20,3 +20,20 @@ Firebase Database is used for user authentication and for video conferencing Jit
 ## API and Librares used
 #### Jistimeet: https://jitsi.github.io/handbook/docs/dev-guide/dev-guide-android-sdk
 #### Firebase: https://firebase.google.com/
+
+## ScreenShots
+Login Activity                 |  Registration Activity
+:-------------------------:|:-------------------------:
+![](https://github.com/Sanket-Kumbhare/GVCall/blob/master/screenshots/login.png)  |  ![](https://github.com/Sanket-Kumbhare/GVCall/blob/master/screenshots/signup.png)
+
+
+Dashboard Activity                  |  Video Call Activity
+:-------------------------:|:-------------------------:
+![](https://github.com/Sanket-Kumbhare/GVCall/blob/master/screenshots/dashboard.png)  |  ![](https://github.com/Sanket-Kumbhare/GVCall/blob/master/screenshots/call.png)
+
+
+Features Menu               
+:-------------------------:
+![](https://github.com/Sanket-Kumbhare/GVCall/blob/master/screenshots/features.png)  
+
+
