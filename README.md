@@ -14,8 +14,8 @@ Firebase Database is used for user authentication and for video conferencing Jit
 - 60-70 user can join the same meet
 
 ## Tools
-- Android Studio
-- Firebase Cloud Firestore
+- [Android Studio](https://developer.android.com/studio)
+- [Firebase Cloud Firestore](https://firebase.google.com/docs/firestore)
 
 ## API and Librares used
 - [Jistimeet](https://jitsi.github.io/handbook/docs/dev-guide/dev-guide-android-sdk)
